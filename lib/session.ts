@@ -39,3 +39,15 @@ export async function createSession(userId: string){
 
     return session.id
 }
+
+export async function deleteSession(sessionId: string | undefined) {
+    if(!sessionId){
+        return
+    }
+
+    await prisma.session.deleteMany({
+        where: {
+            id: sessionId
+        }
+    })
+}
