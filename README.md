@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔐 AuthGuard
 
-## Getting Started
+AuthGuard é um projeto full stack de autenticação desenvolvido com foco em aprendizado e boas práticas, implementando login, registro, logout e proteção de rotas utilizando sessões no backend.
 
-First, run the development server:
+O objetivo do projeto é demonstrar um fluxo real de autenticação, integração entre front-end e back-end e persistência de dados.
+
+---
+
+## 🚀 Funcionalidades
+
+- Cadastro de usuário
+- Login com validação de credenciais
+- Hash de senha com bcrypt
+- Sessão baseada em cookies (backend)
+- Proteção de rotas com middleware
+- Logout e invalidação da sessão
+- Dashboard acessível apenas para usuários autenticados
+
+---
+
+## 🧱 Stack Tecnológica
+
+### Front-end
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+
+### Back-end
+- API Routes (Next.js)
+- Node.js
+- Prisma ORM
+- SQLite
+
+---
+
+## 📦 Pré-requisitos
+
+Antes de rodar o projeto, você precisa ter instalado:
+
+- Node.js (v18 ou superior)
+- npm ou yarn
+
+---
+
+## ⚙️ Como rodar o projeto localmente
+
+### 1️⃣ Clone o repositório
 
 ```bash
+git clone https://github.com/ronizera/authguard
+cd authguard
+
+2️⃣ Instale as dependências
+
+npm install ou yarn install
+
+3️⃣ Configure as variáveis de ambiente
+
+Crie um arquivo .env na raiz do projeto:
+
+DATABASE_URL="file:./dev.db"
+
+4️⃣ Gere o banco de dados
+npx prisma migrate dev
+
+Isso irá:
+
+Criar o banco SQLite
+
+Aplicar as migrations
+
+Gerar o Prisma Client
+
+5️⃣ Rode o projeto
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+A aplicação estará disponível em:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+http://localhost:3000
