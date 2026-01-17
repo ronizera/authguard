@@ -41,10 +41,9 @@ export default function DashboardPage(){
 
     return(
         <main className="min-h-screen bg-neutral-50 px-6 py-10 text-black">
-    {/* Header */}
+    
     <header className="max-w-4xl mx-auto flex justify-between items-center mb-10">
       <div>
-        <p className="text-sm text-neutral-500">Boa noite</p>
         <h1 className="text-3xl font-bold text-neutral-900">
           Bem-vindo de volta, {user?.name}!
         </h1>
@@ -64,9 +63,9 @@ export default function DashboardPage(){
       </button>
     </header>
 
-    {/* Conteúdo */}
+   
     <section className="max-w-4xl mx-auto space-y-6">
-      {/* Card principal */}
+     
       <div className="bg-white rounded-xl shadow p-6">
         <h2 className="text-lg font-semibold mb-4">Suas Informações</h2>
 
@@ -84,7 +83,7 @@ export default function DashboardPage(){
         </div>
       </div>
 
-      {/* Cards secundários */}
+      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-white rounded-xl shadow p-6">
           <h3 className="font-semibold mb-2">Próximos Passos</h3>
